@@ -22,11 +22,9 @@ var fightOrSkip = function () {
       // subtract money from playerMoney for skipping
       playerInfo.playerMoney = playerInfo.money - 10;
       return true;
-      shop();
-    } else {
-      return false;
     }
   }
+  return false;
 };
 
 // fight function (now with parameter for enemy's name)
@@ -38,7 +36,7 @@ var fight = function (enemy) {
 
     if (fightOrSkip()) {
       break;
-    }; // <-- Replace code with this function call
+    }// <-- Replace code with this function call
 
     // remove enemy's health by subtracting the amount set in the playerInfo.attack 
     //generate random damage value based on player's attack power
